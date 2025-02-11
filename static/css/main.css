@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+body{
+    margin: 0;
+    padding: 0; 
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.boxbg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    background-image: url(https://design.pibig.info/uploads/posts/2023-04/1680850302_design-pibig-info-p-restorani-s-temnim-intererom-dizain-oboi-5.jpg);
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;   
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+.header > img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+.header h1{
+    font-size: 70px;
+    color: khaki;
+    background-color:rgb(19, 25, 30);
+    padding: 10px;
+    border-radius: 17px;
+    padding-top: 19px;
+}
+.header button{
+    background-color: brown;
+    font-size: 45px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+.header button:hover{
+    background-color: rgb(241, 168, 142);
+}
+.header button:focus{
+    background-color: rgb(241, 168, 142);
+}
+.navmenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 15px;
+    
+}
+.itemenu a{
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(19, 25, 30);
+    background-color: burlywood;
+    border-radius: 15px;
+    padding: 5px;
+}
+.itemenu a:hover{
+    background-color: rgb(19, 25, 30);
+    color: burlywood;
+}
+.about{
+    width: 70%;
+    font-size: 25px;
+    color: wheat;
+    background-color:rgb(46, 22, 22);
+    display: block;
+    padding: 8px;
+    border-radius: 17px;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.boxabout{
+    margin-left: 370px;
+    margin-top: 40px;
+    
+}
+
+
+.topfooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 60px;
+}
+.top a{
+    color: antiquewhite ;
+    text-decoration: none;
+}
+
+.top a:hover{
+color: rgb(60, 155, 223);
+}
+
+.bottomfooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 65px;
+    padding-bottom: 50px;
+}
+.bottom a{
+    color: antiquewhite ;
+    text-decoration: none;
+
+}
+.bottom a:hover{
+    color: rgb(60, 155, 223);
+    }
+.footer{
+    background-color: rgb(40, 35, 35);
+    
+}
+
+.topbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    color: antiquewhite;
+    
+}
+.topdish img{
+width: 400px;
+}
+.topdish{
+    background-color: rgb(54, 46, 46);
+    border-radius: 18px;
+}
+.topdish .toptext{
+    padding: 5px;
+}
+
+.toplabel{
+    color: khaki;
+    background-color:rgb(19, 25, 30);
+    display: inline-block;
+    border-radius: 10px;
+    height: 45px;
+    width: 314px;
+    margin-bottom: 50px;
+}
+
+.restaurantlabel{
+    padding-top: 220px;
+}
+
+.bg2{
+    background-color: rgb(9, 5, 3);
+}
+
+.fotobox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+    padding-top: 100px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+#img_first{
+    width: 800px;
+}
+#img_second{
+    width: 600px;
+}
+
+#img_third{
+    width: 650px;
+}
+
+#img_fourth{
+    width: 750px;
+}
+
+.topfooter{
+    margin: 0;
+}
