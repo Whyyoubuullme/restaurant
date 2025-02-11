@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/dishes.css'%}"
+    />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'%}" />
+
+    <style>
+      .dish {
+        margin-bottom: 20px;
+      }
+
+      .dishesbox {
+        gap: 15px;
+      }
+
+      .namemenu{
+        color: khaki;
+    background-color:rgb(19, 25, 30);
+    border-radius: 10px;
+    height: 45px;
+    width: 314px;
+    margin-bottom: 50px;
+    padding-top: 8px;
+      }
+
+      .boxnamemenu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 90px
+      }
+
+      .availableclass{
+        color: yellow;
+        background-color: green;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="boxbg">
+    <header class="header">
+      <img
+        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/restaurant-logo-design-template-80b1da7e7f6651ca3c774a5fec4089bb_screen.jpg?ts=1625576767"
+        alt="ресторона"
+      />
+      <h1>Naturelle</h1>
+      <button type="button">reserve</button>
+    </header>
+
+    <nav class="navmenu">
+      <div class="itemenu">
+        <a href="/restaurant/home">morning menu</a>
+      </div>
+
+      <div class="itemenu">
+        <a href="/restaurant/reviews">rewies</a>
+      </div>
+
+      <div class="itemenu">
+        <a href="/restaurant/dishes">new dishes</a>
+      </div>
+
+      <div class="itemenu">
+        <a href="/restaurant/home/#footercontact">contact info</a>
+      </div>
+    </nav>
+  <div class="boxnamemenu">
+     <h1 class="namemenu">menu (all dishes)</h1>
+  </div>   
+    <div class="dishesbox">
+      {% for dish in dishes%}
+      <div class="dish" style="margin-bottom: 20px">
+        <div class="imgpart">
+          <a href="/restaurant/dishdetail/{{dish.slug}}">
+            <img src="{{dish.image.url}}" alt="{{dish.name}}" />
+          </a>
+        </div>
+        <div class="textpart">
+          <h2>{{dish.name}}</h2>
+          <p>{{dish.price}} UAH</p>
+          {% if dish.available %}
+          <div class="availableclass"> available </div>
+          {% else %}
+          <div class="noavailableclass"> not available </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="footer" id="footercontact">
+      <div class="topfooter">
+        <div class="top"><a href="#">Main</a></div>
+
+        <div class="top"><a href="#">about</a></div>
+
+        <div class="top"><a href="#">Menu</a></div>
+
+        <div class="top"><a href="#">delivery</a></div>
+      </div>
+
+      <div class="bottomfooter">
+        <div class="top"><a href="#">place</a></div>
+
+        <div class="top"><a href="#">contacts</a></div>
+
+        <div class="top"><a href="#">Mn-Sun 21:00</a></div>
+
+        <div class="top"><a href="#">loremg</a></div>
+      </div>
+    </div>
+  </body>
+</html>
